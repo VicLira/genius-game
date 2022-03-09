@@ -31,7 +31,8 @@
 
 - [ ] score storage;
 - [ ] difficulty levels;
-- [ ] implementation of user and machine turns.
+- [ ] implementation of user and machine turns;
+- [ ] clean code.
 
 
 ## Contributing
