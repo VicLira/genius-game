@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-game {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.genius-control {
+    display: grid;
+    grid-template-areas: 
+    'btnGreen btnRed'
+    'btnYellow btnBlue';
+    grid-gap: 30px;
+    background-color: #050505;
+    border: 20px solid rgba(0, 0, 0, 0.2);
+    border-radius: 90%;
+    width: 600px;
+    height: 600px;
+}
+
+.green {
+    grid-area: btnGreen;
+    background: #25db00;
+    border-top-left-radius: 100%;
+}
+
+.red {
+    grid-area: btnRed;
+    background: #db0000;
+    border-top-right-radius: 100%;
+}
+
+.yellow {
+    grid-area: btnYellow;
+    background: #dbcd00;
+    border-bottom-left-radius: 100%;
+}
+
+.blue {
+    grid-area: btnBlue;
+    background: #0400db;
+    border-bottom-right-radius: 100%;
+}
+
+.green.selected {
+    transition: 0.3s;
+    box-shadow: 2px 0px 21px 11px #25db00;
+}
+
+.red.selected {
+    transition: 0.3s;
+    box-shadow: 2px 0px 21px 11px #db0000;
+}
+
+.yellow.selected {
+    transition: 0.3s;
+    box-shadow: 2px 0px 21px 11px #dbcd00;
+}
+
+.blue.selected {
+    transition: 0.3s;
+    box-shadow: 2px 0px 21px 11px #0400db;
+}
+
+/* SCORE PANEL ------------------- */
+
+.score-panel {
+    width: 100%;
+    max-width: 250px;
+}
+
+.start {
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: #1B9AAA;
+    width: 100%;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.score-wrapper {
+    background: #1B9AAA;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-wrapper p {
+    color: #fff;
+    font-size: 30px;
+}
+
+/* TITLE ------------------ */
+
+.tertiary-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* BUTTON ------------------ */
+
+.night-mode-button {
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: #1B9AAA;
+    width: 100%;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* NIGHT MODE --------------*/
+
+.night-mode {
+    transition: 0.5s;
+    background-color: #050505;
+}
+
+/* DAY MODE --------------*/
+
+.day-mode {
+    transition: 0.5s;
+    background-color: #F5F1E3;
+}
+
+
+/* MEDIA QUERY --------------- */
+
+@media (max-width: 768px) {
+
+    .container {
+        height: 90%;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .genius-control {
+        width: 400px;
+        height: 400px;
+    }
+
+    .score-panel {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .genius-control {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+
